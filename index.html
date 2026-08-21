@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saoco Labs - Coming Soon</title>
+    <style>
+        /* Reset and base styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        /* Animated Background */
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image4.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: slowZoom 20s infinite alternate linear;
+            z-index: 1;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        /* Dark overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75); 
+            z-index: 2;
+        }
+
+        /* Content positioning */
+        .content {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 0 20px;
+            color: #ffffff;
+        }
+
+        /* Text styling */
+        h1 {
+            font-size: 1.8rem;
+            max-width: 800px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Desktop Button Container (Side-by-side) */
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Base Button Styles */
+        .btn {
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+            text-align: center;
+        }
+
+        /* WhatsApp Button styling */
+        .whatsapp-btn {
+            background-color: #25D366; 
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe57;
+            transform: translateY(-3px);
+        }
+
+        /* Instagram Button styling */
+        .instagram-btn {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+        }
+
+        .instagram-btn:hover {
+            filter: brightness(1.15);
+            transform: translateY(-3px);
+            animation: none; /* Stops the pulse so the hover effect is smooth */
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Mobile responsiveness (Stacked vertically) */
+        @media (max-width: 600px) {
+            h1 { 
+                font-size: 1.4rem; 
+                margin-bottom: 30px; 
+            }
+            .button-container { 
+                flex-direction: column; /* This stacks them */
+                width: 100%; 
+                max-width: 320px; /* Keeps the buttons from stretching too wide on tablets */
+                gap: 15px; 
+            }
+            .btn { 
+                padding: 12px 25px; 
+                font-size: 1.1rem; 
+                width: 100%; 
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container"></div>
+    <div class="overlay"></div>
+    
+    <div class="content">
+        <h1>Our new webstore is currently under Development. In the meantime, we are Actively Accepting Orders and Invite you to explore our most recent projects below.</h1>
+        
+        <div class="button-container">
+            <a href="https://tinyurl.com/saocolabs" class="btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                Order via WhatsApp
+            </a>
+            
+            <!-- Replace the # below with your actual Instagram link -->
+            <a href="https://www.instagram.com/saocolabs" class="btn instagram-btn" target="_blank" rel="noopener noreferrer">
+                View Our Work on Instagram
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
